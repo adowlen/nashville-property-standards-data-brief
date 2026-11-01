@@ -1,0 +1,100 @@
+{
+ "pull_date": "2026-11-01",
+ "property_standards": {
+  "url": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Property_Standards_Violations_2/FeatureServer/0/query",
+  "service": {
+   "name": "PropertyStandardsViolations",
+   "editingInfo": {
+    "lastEditDate": 1793529753846,
+    "schemaLastEditDate": 1793529753846,
+    "dataLastEditDate": 1793529753846
+   },
+   "fields": [
+    "ObjectId",
+    "Request_Nbr",
+    "Date_Received",
+    "Property_APN",
+    "Property_Address",
+    "City",
+    "State",
+    "Property_Owner",
+    "Complaint_Source",
+    "Reported_Problem",
+    "Status",
+    "Cncl_Dist",
+    "Last_Activity_Date",
+    "Last_Activity",
+    "Last_Act__Result",
+    "Violations_Noted",
+    "Lon",
+    "Lat",
+    "ZIP",
+    "Subtype_Description"
+   ]
+  },
+  "server_count": 43283,
+  "local_rows": 43283
+ },
+ "str_permits": {
+  "url": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Residential_Short_Term_Rental_Permits_view/FeatureServer/0/query",
+  "service": {
+   "name": "ResidentialShortTermRentalPermits",
+   "editingInfo": {
+    "lastEditDate": 1793527292442,
+    "schemaLastEditDate": 1793527292442,
+    "dataLastEditDate": 1793527292442
+   },
+   "fields": [
+    "Permit__",
+    "Permit_Subtype_Description",
+    "Date_Entered",
+    "Date_Issued",
+    "Address",
+    "City",
+    "State",
+    "Subdivision_Lot",
+    "Permit_Type",
+    "Permit_SubType",
+    "Purpose",
+    "Council_Dist",
+    "Census_Tract",
+    "Expiration_Date",
+    "Permit_Owner_Name",
+    "Permit_Owner_Addr1",
+    "Permit_Owner_Addr2",
+    "Permit_Owner_Addr3",
+    "Permit_Owner_City",
+    "Permit_Owner_State",
+    "Permit_Owner_Zip",
+    "Permit_Status",
+    "Applicant",
+    "Applicant_Home_Phone",
+    "Applicant_Mobile_Phone",
+    "Applicant_Work_Phone",
+    "Applicant_Work_Phone_Ext",
+    "Contact",
+    "Contact_Home_Phone",
+    "Contact_Mobile_Phone",
+    "Contact_Work_Phone",
+    "Contact_Work_Phone_Ext",
+    "Lon",
+    "Lat",
+    "ObjectId",
+    "ZIP",
+    "Parcel"
+   ]
+  },
+  "server_count": 17634,
+  "local_rows": 17634,
+  "dropped_columns": [
+   "Applicant_Home_Phone",
+   "Applicant_Mobile_Phone",
+   "Applicant_Work_Phone",
+   "Applicant_Work_Phone_Ext",
+   "Contact_Home_Phone",
+   "Contact_Mobile_Phone",
+   "Contact_Work_Phone",
+   "Contact_Work_Phone_Ext"
+  ]
+ }
+}

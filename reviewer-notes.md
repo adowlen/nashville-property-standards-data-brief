@@ -1,0 +1,29 @@
+# Reviewer notes - Nashville property standards brief (2026-11-01)
+
+## Claims most likely to be challenged
+
+- Headline 73.8 percent (419 of 568 "host - no strp" cases on parcels with no STR permit record at all). The two pressure points are printed in the brief: (1) the 568 is an exact-string count in a free-text field; spelling and spacing variants total 586, and the 18 near-miss rows are listed in the audit output. (2) Permit classes are as of the November 1, 2026 pull, not as of each case's received date; a parcel permitted after its case was received would class as issued here. The expired-only and issued shares should be read as bounds, as the brief states.
+- The tasked count of 572 "host - no strp" records from the October 29 live sample does NOT reproduce: the full November 1 pull gives 568 exact. The brief uses 568 and discloses the difference in Finding 7 rather than inheriting 572.
+- STR geography (Finding 6) versus overall geography (Finding 3) is a comparison of case counts on two populations, printed as counts only. A reader could still misread it as a rate comparison; the exposure caveat is printed in both findings.
+- Finding 5's open-share gradient (17.5 percent for 2026 receipts against 1.5 to 2.6 percent for earlier years) could be quoted as a slowdown in case resolution. It is a snapshot pattern with a censoring explanation printed in the finding; no duration field exists in the layer to compute resolution times.
+
+## Checks that could not be completed
+
+- As-of-receipt permit status reconstruction: not performed. The permits file carries issue and expiration dates, but it also carries renewals and duplicate permit numbers (30 duplicates recorded in the October 14 package) whose sequencing the published file does not fully document. Recorded as an incomplete check; the brief bounds the affected figures instead of presenting them as as-of measurements, and the Who can act section asks the permitting side for a status-history extract.
+- District and ZIP exposure rates: not computed. No housing-unit, parcel, or population denominator matched to the layer's geographies was available in the sources used; Finding 3 prints counts with the caveat instead.
+- DONE versus CLOSED status distinction: the layer publishes no definition separating the two status strings (40,245 against 50 cases). The brief reports both strings unmerged and makes no claim that depends on the distinction.
+- Layer retention rule: the window as pulled begins October 26, 2023, three years before the latest received date, but the service description does not state a retention rule, so the brief describes the window as pulled and does not assert that older cases were dropped.
+- Agenda content for the November 5, 2026 special meeting: the meeting is verified from a primary source (Nashville.gov news release, October 2, 2026, 'Metro Council to Meet Thursday, November 5 Due to November 3 Election': Thursday, November 5, 2026, 6:30 PM, called by Vice Mayor Henderson because the November 3 general election falls on the regular meeting date; committee meetings November 4-5). No agenda item on STR or property standards is asserted for that meeting anywhere in the package. Separately, the Nashville.gov event list carries a directly on-topic meeting the day before: the Property Standards and Appeals Board, Wednesday, November 4, 2026, 3:00 PM, Metro Office Building; the package cites it as listed and asserts no specific case on its agenda.
+
+## Findings that surprised us
+
+- STR cases arrive by EMAIL at 98.1 percent (1,463 of 1,491), against 4.3 percent of all cases, and monthly STR counts swing from 3 to 102. The pattern suggests a single batch reporting channel; the layer does not name the sender, and the brief attributes nothing.
+- Every one of the 568 "host - no strp" cases records exactly the same violation string (STRP PERMIT REQUIRED) and the same complaint source (EMAIL). The category is unusually uniform for a free-text field, which is part of why the exact-string count is defensible.
+- The control case types sit on currently permitted STR parcels at 0.3 to 0.7 percent while STR cases sit at 31.3 percent on the same join, a roughly 50-fold gap that makes a join artifact an unlikely explanation for Finding 8.
+- The caseload is led by southern ZIP codes (37013 and 37211 hold 31.2 percent of all cases) while STR cases concentrate in central ZIP codes (37207, 37208, 37209, 37203); the two geographies barely overlap at the top of either table.
+
+## Flags
+
+- This brief's findings concern a program area (STR enforcement by the Metro Codes Department) rather than any named official; no individual is named, and no address, parcel, owner, or operator is named, per the named-rows rule (standards section 12.1).
+- First use of this dataset (Property Standards Violations layer) in the Machine Readable catalog: flagged as a first-use dataset under standards section 11.3.
+- Hero: the illustration was generated in the parent morning run (2026-11-01) and composited there: a Nashville street at dusk, an inspector with a clipboard facing a house with a suitcase on its amber-lit porch (the short-term-rental cue), tall grass and a mailbox in the foreground, in the brand palette (dark charcoal, amber, teal). code/hero_composite.py places the headline over a left-side gradient scrim matched to the art's clean dark field; the composited hero.png was viewed by the parent run during QA: headline 73.8 percent and the source line fully legible, the narrative scene unobscured. Source art: hero_source/hero-art.webp. hero-headline.txt carries the headline figure and story description. (The composite script's original top-band layout was adapted to a left scrim during QA because the art carries its clean field on the left; the change is commented in the script.)

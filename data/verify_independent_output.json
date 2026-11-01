@@ -1,0 +1,174 @@
+{
+ "all_match": true,
+ "checks": {
+  "total_cases": {
+   "independent": 43283,
+   "stats_json": 43283,
+   "match": true
+  },
+  "window_min": {
+   "independent": "2023-10-26",
+   "stats_json": "2023-10-26",
+   "match": true
+  },
+  "window_max": {
+   "independent": "2026-10-29",
+   "stats_json": "2026-10-29",
+   "match": true
+  },
+  "all_dates_midnight_local": {
+   "independent": true,
+   "stats_json": true,
+   "match": true
+  },
+  "status_done": {
+   "independent": 40245,
+   "stats_json": 40245,
+   "match": true
+  },
+  "status_open": {
+   "independent": 2988,
+   "stats_json": 2988,
+   "match": true
+  },
+  "status_closed": {
+   "independent": 50,
+   "stats_json": 50,
+   "match": true
+  },
+  "subtype_housing": {
+   "independent": 27495,
+   "stats_json": 27495,
+   "match": true
+  },
+  "subtype_str": {
+   "independent": 1491,
+   "stats_json": 1491,
+   "match": true
+  },
+  "subtype_count_sum": {
+   "independent": 43283,
+   "stats_json": 43283,
+   "match": true
+  },
+  "host_no_strp_exact": {
+   "independent": 568,
+   "stats_json": 568,
+   "match": true
+  },
+  "host_all_violations_strp_permit_required": {
+   "independent": true,
+   "stats_json": true,
+   "match": true
+  },
+  "host_all_email": {
+   "independent": true,
+   "stats_json": true,
+   "match": true
+  },
+  "host_done": {
+   "independent": 522,
+   "stats_json": 522,
+   "match": true
+  },
+  "str_records": {
+   "independent": 17634,
+   "stats_json": 17634,
+   "match": true
+  },
+  "str_issued_records": {
+   "independent": 7010,
+   "stats_json": 7010,
+   "match": true
+  },
+  "str_distinct_parcels_issued": {
+   "independent": 5466,
+   "stats_json": 5466,
+   "match": true
+  },
+  "fusion_all_no_record": {
+   "independent": 41502,
+   "stats_json": 41502,
+   "match": true
+  },
+  "fusion_all_issued": {
+   "independent": 714,
+   "stats_json": 714,
+   "match": true
+  },
+  "fusion_all_total": {
+   "independent": 43283,
+   "stats_json": 43283,
+   "match": true
+  },
+  "fusion_host_no_record": {
+   "independent": 419,
+   "stats_json": 419,
+   "match": true
+  },
+  "fusion_host_issued": {
+   "independent": 38,
+   "stats_json": 38,
+   "match": true
+  },
+  "fusion_host_total": {
+   "independent": 568,
+   "stats_json": 568,
+   "match": true
+  },
+  "fusion_str_subtype_no_record": {
+   "independent": 633,
+   "stats_json": 633,
+   "match": true
+  },
+  "fusion_str_subtype_issued": {
+   "independent": 466,
+   "stats_json": 466,
+   "match": true
+  },
+  "fusion_str_subtype_total": {
+   "independent": 1491,
+   "stats_json": 1491,
+   "match": true
+  },
+  "headline_pct_no_record_host": {
+   "independent": 73.8,
+   "stats_json": 73.8,
+   "match": true
+  },
+  "control_Codes High Grass and Weeds_on_issued": {
+   "independent": 41,
+   "stats_json": 41,
+   "match": true
+  },
+  "control_Codes Housing Request_on_issued": {
+   "independent": 182,
+   "stats_json": 182,
+   "match": true
+  },
+  "repeat_address_cases": {
+   "independent": 22453,
+   "stats_json": 22453,
+   "match": true
+  },
+  "distinct_addresses": {
+   "independent": 29031,
+   "stats_json": 29031,
+   "match": true
+  },
+  "distinct_apn": {
+   "independent": 28863,
+   "stats_json": 28863,
+   "match": true
+  },
+  "zip_not_determined": {
+   "independent": 7,
+   "stats_json": 7,
+   "match": true
+  },
+  "sync_gate_brief_key_numbers_present": {
+   "missing_from_brief": [],
+   "match": true
+  }
+ }
+}

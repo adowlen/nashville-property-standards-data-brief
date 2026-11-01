@@ -1,0 +1,685 @@
+{
+ "pull_date": "2026-11-01",
+ "proposed_repo": "nashville-property-standards-data-brief",
+ "decision_hook": {
+  "event": "Metro Council special meeting, Thursday, November 5, 2026, 6:30 PM",
+  "verification": "VERIFIED from a primary source: Nashville.gov news release dated October 2, 2026, 'Metro Council to Meet Thursday, November 5 Due to November 3 Election' (https://www.nashville.gov/departments/council/news/metro-council-meet-thursday-november-5-due-november-3-election): Vice Mayor Angie E. Henderson called a special meeting of the Metro Council for Thursday, November 5, 2026 at 6:30 PM because the November 3, 2026 general election falls on the regular meeting date; associated committee meetings November 4-5, 2026.",
+  "board_meeting": "Property Standards and Appeals Board meeting, Wednesday, November 4, 2026, 3:00 PM, Metro Office Building, as listed on the Nashville.gov event list (checked 2026-11-01). The board's Nashville.gov board page states it hears and acts upon appeals of orders issued by the department as it administers the Property Standards Code.",
+  "caveat": "No property-standards or STR item is asserted to be on the November 5 Council meeting agenda in this brief. The November 4 board meeting is directly on-topic by the board's stated function; no specific case on its agenda is asserted."
+ },
+ "window": {
+  "date_received_min": "2023-10-26",
+  "date_received_max": "2026-10-29",
+  "note": "Date_Received is date-only (all values midnight America/Chicago). 2023 is a partial year starting October 26, 2023 and 2026 runs through October 29, 2026."
+ },
+ "totals": {
+  "cases": 43283,
+  "distinct_apn": 28863,
+  "distinct_addresses_norm": 29031,
+  "distinct_request_nbr": 43281,
+  "request_nbr_duplicate_rows": 2,
+  "distinct_owners_as_recorded": 25892
+ },
+ "status": {
+  "DONE": {
+   "cases": 40245,
+   "pct_of_all_cases": 93.0
+  },
+  "OPEN": {
+   "cases": 2988,
+   "pct_of_all_cases": 6.9
+  },
+  "CLOSED": {
+   "cases": 50,
+   "pct_of_all_cases": 0.1
+  }
+ },
+ "status_by_year": {
+  "2023": {
+   "DONE": 1901,
+   "OPEN": 33,
+   "CLOSED": 2
+  },
+  "2024": {
+   "DONE": 13578,
+   "OPEN": 209,
+   "CLOSED": 20
+  },
+  "2025": {
+   "DONE": 13555,
+   "OPEN": 366,
+   "CLOSED": 15
+  },
+  "2026": {
+   "DONE": 11211,
+   "OPEN": 2380,
+   "CLOSED": 13
+  }
+ },
+ "open_by_year": {
+  "2023": 33,
+  "2024": 209,
+  "2025": 366,
+  "2026": 2380
+ },
+ "open_share_by_year_pct": {
+  "2023": 1.7,
+  "2024": 1.5,
+  "2025": 2.6,
+  "2026": 17.5
+ },
+ "cases_by_year": {
+  "2023": 1936,
+  "2024": 13807,
+  "2025": 13936,
+  "2026": 13604
+ },
+ "subtypes": [
+  {
+   "subtype": "Codes Housing Request",
+   "cases": 27495,
+   "pct_of_all_cases": 63.5
+  },
+  {
+   "subtype": "Codes High Grass and Weeds",
+   "cases": 8075,
+   "pct_of_all_cases": 18.7
+  },
+  {
+   "subtype": "PS Audit",
+   "cases": 3824,
+   "pct_of_all_cases": 8.8
+  },
+  {
+   "subtype": "Short Term Rental Property",
+   "cases": 1491,
+   "pct_of_all_cases": 3.4
+  },
+  {
+   "subtype": "CA Codes Case",
+   "cases": 999,
+   "pct_of_all_cases": 2.3
+  },
+  {
+   "subtype": "Codes Sign Request",
+   "cases": 692,
+   "pct_of_all_cases": 1.6
+  },
+  {
+   "subtype": "Home Occupation PS Complaint",
+   "cases": 307,
+   "pct_of_all_cases": 0.7
+  },
+  {
+   "subtype": "Codes Right of Way Request",
+   "cases": 176,
+   "pct_of_all_cases": 0.4
+  },
+  {
+   "subtype": "CA Paid Parking Lot",
+   "cases": 114,
+   "pct_of_all_cases": 0.3
+  },
+  {
+   "subtype": "CA PS Night Inspection",
+   "cases": 43,
+   "pct_of_all_cases": 0.1
+  },
+  {
+   "subtype": "Codes Neighborhood Request",
+   "cases": 17,
+   "pct_of_all_cases": 0.0
+  },
+  {
+   "subtype": "Landlord Registration Violation",
+   "cases": 16,
+   "pct_of_all_cases": 0.0
+  },
+  {
+   "subtype": "Codes Urban Forestry",
+   "cases": 16,
+   "pct_of_all_cases": 0.0
+  },
+  {
+   "subtype": "CA Paid Parking Garage",
+   "cases": 6,
+   "pct_of_all_cases": 0.0
+  },
+  {
+   "subtype": "PS - Sign Removal",
+   "cases": 5,
+   "pct_of_all_cases": 0.0
+  },
+  {
+   "subtype": "Codes Building Division",
+   "cases": 5,
+   "pct_of_all_cases": 0.0
+  },
+  {
+   "subtype": "Codes Vacant Lot High Grass",
+   "cases": 1,
+   "pct_of_all_cases": 0.0
+  },
+  {
+   "subtype": "Health Department General Sanitation",
+   "cases": 1,
+   "pct_of_all_cases": 0.0
+  }
+ ],
+ "complaint_sources": [
+  {
+   "source": "HUB",
+   "cases": 16462,
+   "pct_of_all_cases": 38.0
+  },
+  {
+   "source": "INSPECTOR REPORTED",
+   "cases": 16100,
+   "pct_of_all_cases": 37.2
+  },
+  {
+   "source": "PHONE",
+   "cases": 4217,
+   "pct_of_all_cases": 9.7
+  },
+  {
+   "source": "Audit",
+   "cases": 3800,
+   "pct_of_all_cases": 8.8
+  },
+  {
+   "source": "EMAIL",
+   "cases": 1872,
+   "pct_of_all_cases": 4.3
+  },
+  {
+   "source": "OTHER SOURCE",
+   "cases": 462,
+   "pct_of_all_cases": 1.1
+  },
+  {
+   "source": "Other Metro Agency",
+   "cases": 100,
+   "pct_of_all_cases": 0.2
+  },
+  {
+   "source": "Metro Council",
+   "cases": 75,
+   "pct_of_all_cases": 0.2
+  },
+  {
+   "source": "WALK IN",
+   "cases": 57,
+   "pct_of_all_cases": 0.1
+  },
+  {
+   "source": "NEIGHBORHOOD NOTIFICATION",
+   "cases": 49,
+   "pct_of_all_cases": 0.1
+  },
+  {
+   "source": "MAIL",
+   "cases": 26,
+   "pct_of_all_cases": 0.1
+  },
+  {
+   "source": "Metro PD",
+   "cases": 23,
+   "pct_of_all_cases": 0.1
+  },
+  {
+   "source": "NEIGHBORHOOD GROUP",
+   "cases": 22,
+   "pct_of_all_cases": 0.1
+  },
+  {
+   "source": "HUB-SPC",
+   "cases": 7,
+   "pct_of_all_cases": 0.0
+  },
+  {
+   "source": "CAL",
+   "cases": 4,
+   "pct_of_all_cases": 0.0
+  },
+  {
+   "source": "INCIDENTS CONVERTED FROM OLD SYSTEM",
+   "cases": 3,
+   "pct_of_all_cases": 0.0
+  },
+  {
+   "source": "Metro Public Works",
+   "cases": 2,
+   "pct_of_all_cases": 0.0
+  },
+  {
+   "source": "Codes Online",
+   "cases": 2,
+   "pct_of_all_cases": 0.0
+  }
+ ],
+ "reported_problem": {
+  "unique_values": 21721,
+  "null_cases": 86,
+  "note": "Reported_Problem is free text (intake shorthand and pasted hubNashville text); exact-string counts only are reported, with near-miss variants counted in the audit.",
+  "top_exact": [
+   {
+    "value": "JUNK TRASH DEBRIS",
+    "cases": 3432
+   },
+   {
+    "value": "PARKING ON GRASS",
+    "cases": 2676
+   },
+   {
+    "value": "HIGH GRASS/WEEDS",
+    "cases": 1712
+   },
+   {
+    "value": "PROBLEM REPORTED",
+    "cases": 1009
+   },
+   {
+    "value": "host - no strp",
+    "cases": 568
+   },
+   {
+    "value": "GW",
+    "cases": 555
+   },
+   {
+    "value": "IMV",
+    "cases": 526
+   },
+   {
+    "value": "Parking on grass",
+    "cases": 420
+   },
+   {
+    "value": "HIGH GRASS",
+    "cases": 327
+   },
+   {
+    "value": "JUNK, TRASH, AND DEBRIS",
+    "cases": 310
+   },
+   {
+    "value": "Junk trash debris",
+    "cases": 291
+   },
+   {
+    "value": "WIND FLAGS",
+    "cases": 224
+   }
+  ],
+  "host_no_strp_exact": 568,
+  "host_expired_strp_exact": 108,
+  "host_family_normalized_variants_total": 586
+ },
+ "violations_noted": {
+  "null_cases": 62,
+  "strp_permit_required_exact": 1146,
+  "strp_permit_required_containing": 1157,
+  "top_exact": [
+   {
+    "value": "HIGH WEEDS",
+    "cases": 8564
+   },
+   {
+    "value": "OPEN STORAGE, JUNK, TRASH, DEBRIS",
+    "cases": 6154
+   },
+   {
+    "value": "PARKING ON GRASS",
+    "cases": 5639
+   },
+   {
+    "value": "EXTERIOR PROP AREA \u2013 OPEN STORAGE - ALL",
+    "cases": 3261
+   },
+   {
+    "value": "UNLIC / INOP / ACCUMULATION MTR VEHICLES",
+    "cases": 1562
+   },
+   {
+    "value": "STRP PERMIT REQUIRED",
+    "cases": 1146
+   },
+   {
+    "value": "PARKING ON GRASS,UNLIC / INOP / ACCUMULATION MTR VEHICLES",
+    "cases": 825
+   },
+   {
+    "value": "SIGNS  \u2013 PROHIBITED - WIND",
+    "cases": 775
+   }
+  ]
+ },
+ "geography": {
+  "district_top": [
+   {
+    "district": 29,
+    "cases": 2571,
+    "pct_of_all_cases": 5.9
+   },
+   {
+    "district": 11,
+    "cases": 2427,
+    "pct_of_all_cases": 5.6
+   },
+   {
+    "district": 16,
+    "cases": 2382,
+    "pct_of_all_cases": 5.5
+   },
+   {
+    "district": 3,
+    "cases": 2093,
+    "pct_of_all_cases": 4.8
+   },
+   {
+    "district": 28,
+    "cases": 1988,
+    "pct_of_all_cases": 4.6
+   },
+   {
+    "district": 8,
+    "cases": 1810,
+    "pct_of_all_cases": 4.2
+   },
+   {
+    "district": 30,
+    "cases": 1798,
+    "pct_of_all_cases": 4.2
+   },
+   {
+    "district": 7,
+    "cases": 1772,
+    "pct_of_all_cases": 4.1
+   }
+  ],
+  "district_not_determined": 2,
+  "zip_top": [
+   {
+    "zip": "37013",
+    "cases": 7226,
+    "pct_of_all_cases": 16.7
+   },
+   {
+    "zip": "37211",
+    "cases": 6267,
+    "pct_of_all_cases": 14.5
+   },
+   {
+    "zip": "37115",
+    "cases": 3260,
+    "pct_of_all_cases": 7.5
+   },
+   {
+    "zip": "37207",
+    "cases": 3091,
+    "pct_of_all_cases": 7.1
+   },
+   {
+    "zip": "37217",
+    "cases": 2574,
+    "pct_of_all_cases": 5.9
+   },
+   {
+    "zip": "37076",
+    "cases": 2437,
+    "pct_of_all_cases": 5.6
+   },
+   {
+    "zip": "37138",
+    "cases": 2131,
+    "pct_of_all_cases": 4.9
+   },
+   {
+    "zip": "37209",
+    "cases": 2115,
+    "pct_of_all_cases": 4.9
+   }
+  ],
+  "zip_not_determined": 7,
+  "zip_not_determined_note": "ZIP is null on 2 cases and carries the sentinel value 0 on 5 cases; those 7 are unknown and stay in every population denominator."
+ },
+ "repeat_addresses": {
+  "distinct_addresses_norm": 29031,
+  "addresses_with_1_case": 20830,
+  "addresses_with_2_cases": 5079,
+  "addresses_with_3_to_5_cases": 2790,
+  "addresses_with_6_plus_cases": 332,
+  "repeat_addresses_2_plus": 8201,
+  "cases_on_repeat_addresses": 22453,
+  "cases_on_repeat_addresses_pct": 51.9,
+  "cases_on_6_plus_addresses": 2541,
+  "max_cases_one_address": 39,
+  "distinct_apn_with_2_plus_cases": 8253,
+  "cases_on_repeat_apn": 22673
+ },
+ "str_permits_pull": {
+  "records": 17634,
+  "status_counter": {
+   "EXPIRED": 8053,
+   "ISSUED": 7010,
+   "CANCELLED": 2277,
+   "REVOKED": 164,
+   "DENIED-D": 40,
+   "PENDING": 37,
+   "EXPIREEXT": 29,
+   "HOLD": 18,
+   "REFUNDED": 3,
+   "VOID": 2,
+   "OK TO PAY": 1
+  },
+  "issued_records": 7010,
+  "distinct_parcels_ever": 10742,
+  "distinct_parcels_issued": 5466,
+  "distinct_parcels_expired_not_issued": 4417,
+  "vintage_note": "Fresh pull 2026-11-01 from the same ArcGIS view used for the 2026-10-14 STR permits brief (17,612 records on 2026-10-13; 17,634 on 2026-11-01). Applicant and contact phone columns were dropped at pull time and never used."
+ },
+ "fusion": {
+  "join_key": "Property Standards Property_APN = STR permits Parcel, alphanumeric-normalized; both files use the same 11-character standard and 14-character condo parcel formats; APN present on 100 percent of rows in both files",
+  "distinct_ps_apn_matching_any_str_parcel": 1378,
+  "distinct_ps_apn_total": 28863,
+  "all_cases": {
+   "cases": 43283,
+   "no_str_record": 41502,
+   "no_str_record_pct": 95.9,
+   "issued": 714,
+   "issued_pct": 1.6,
+   "expired_not_issued": 868,
+   "expired_not_issued_pct": 2.0,
+   "other_status_only": 199,
+   "other_status_only_pct": 0.5
+  },
+  "str_subtype_cases": {
+   "cases": 1491,
+   "no_str_record": 633,
+   "no_str_record_pct": 42.5,
+   "issued": 466,
+   "issued_pct": 31.3,
+   "expired_not_issued": 288,
+   "expired_not_issued_pct": 19.3,
+   "other_status_only": 104,
+   "other_status_only_pct": 7.0
+  },
+  "host_no_strp_cases": {
+   "cases": 568,
+   "no_str_record": 419,
+   "no_str_record_pct": 73.8,
+   "issued": 38,
+   "issued_pct": 6.7,
+   "expired_not_issued": 79,
+   "expired_not_issued_pct": 13.9,
+   "other_status_only": 32,
+   "other_status_only_pct": 5.6
+  },
+  "address_control": {
+   "cases_address_match_any_str": 1637,
+   "cases_apn_or_address_match": 1802,
+   "cases_both_match": 1616
+  },
+  "controls": {
+   "Codes High Grass and Weeds": {
+    "cases": 8075,
+    "on_issued_parcel": 41,
+    "on_issued_parcel_pct": 0.5
+   },
+   "Codes Housing Request": {
+    "cases": 27495,
+    "on_issued_parcel": 182,
+    "on_issued_parcel_pct": 0.7
+   },
+   "Codes Sign Request": {
+    "cases": 692,
+    "on_issued_parcel": 2,
+    "on_issued_parcel_pct": 0.3
+   }
+  },
+  "layering_admission": "Without the STR permits layer, the brief could not state what share of unpermitted-STR complaints sit on parcels with no permit record at all, or compare STR enforcement geography against the permitted footprint; the layer is retained for that claim."
+ },
+ "str_enforcement": {
+  "subtype_cases": 1491,
+  "subtype_pct_of_all": 3.4,
+  "subtype_status": {
+   "DONE": 1382,
+   "OPEN": 109
+  },
+  "subtype_done_pct": 92.7,
+  "subtype_complaint_source_top": [
+   {
+    "source": "EMAIL",
+    "cases": 1463
+   },
+   {
+    "source": "HUB",
+    "cases": 16
+   },
+   {
+    "source": "INSPECTOR REPORTED",
+    "cases": 7
+   },
+   {
+    "source": "PHONE",
+    "cases": 2
+   }
+  ],
+  "subtype_email_share_pct": 98.1,
+  "all_cases_email_share_pct": 4.3,
+  "subtype_by_year": {
+   "2023": 77,
+   "2024": 551,
+   "2025": 519,
+   "2026": 344
+  },
+  "subtype_district_top": [
+   {
+    "district": 21,
+    "cases": 191
+   },
+   {
+    "district": 17,
+    "cases": 184
+   },
+   {
+    "district": 5,
+    "cases": 132
+   },
+   {
+    "district": 2,
+    "cases": 96
+   },
+   {
+    "district": 19,
+    "cases": 96
+   },
+   {
+    "district": 6,
+    "cases": 91
+   }
+  ],
+  "subtype_zip_top": [
+   {
+    "zip": "37207",
+    "cases": 179
+   },
+   {
+    "zip": "37208",
+    "cases": 173
+   },
+   {
+    "zip": "37209",
+    "cases": 143
+   },
+   {
+    "zip": "37203",
+    "cases": 128
+   },
+   {
+    "zip": "37206",
+    "cases": 120
+   },
+   {
+    "zip": "37211",
+    "cases": 112
+   }
+  ],
+  "subtype_violations_strp_permit_required_containing": 1156,
+  "host_no_strp": {
+   "cases": 568,
+   "distinct_apn": 540,
+   "parcels_with_2_plus_host_cases": 25,
+   "cases_on_2_plus_host_parcels": 53,
+   "status": {
+    "DONE": 522,
+    "OPEN": 46
+   },
+   "done_pct": 91.9,
+   "complaint_source_all_email": true,
+   "violations_noted_all_strp_permit_required": true,
+   "by_year": {
+    "2023": 25,
+    "2024": 162,
+    "2025": 215,
+    "2026": 166
+   },
+   "last_activity_result_top": [
+    {
+     "result": "Violation Resolved",
+     "cases": 518
+    },
+    {
+     "result": "Action Completed",
+     "cases": 38
+    },
+    {
+     "result": "PS - Mandatory Injunction plus fine",
+     "cases": 3
+    },
+    {
+     "result": "Withdrawn",
+     "cases": 2
+    }
+   ]
+  },
+  "monthly_subtype_recent": {
+   "2025-09": 57,
+   "2025-10": 33,
+   "2025-11": 25,
+   "2025-12": 73,
+   "2026-01": 25,
+   "2026-02": 37,
+   "2026-03": 70,
+   "2026-04": 27,
+   "2026-05": 3,
+   "2026-06": 7,
+   "2026-07": 102,
+   "2026-08": 6,
+   "2026-09": 27,
+   "2026-10": 40
+  },
+  "monthly_volatility_note": "Monthly STR-subtype counts swing from 3 (2026-05) to 102 (2026-07) in the last 14 months, consistent with batch intake; no month-to-month trend is claimed."
+ }
+}

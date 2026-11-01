@@ -1,0 +1,264 @@
+== 10.1 sentinel / null handling ==
+PS rows 43283; STR rows 17634
+Date_Received null 0
+Property_APN null 0
+Property_Address null 0
+Cncl_Dist null 2
+ZIP null 2
+Reported_Problem null 86
+Violations_Noted null 62
+Status null 0
+Subtype_Description null 0
+Date_Received range 2023-10-26 00:00:00-05:00 .. 2026-10-29 00:00:00-05:00; all midnight America/Chicago: True
+Date_Received null 0; no sentinel years (min year 2023, max year 2026)
+ZIP unknown (null or '0' sentinel) 7 of 43283 (0.02 percent); ZIP shares in stats use the FULL population as denominator and print this not-determined share (nullable-denominator rule)
+ZIP determined 43276; determined share + not-determined share = 100.0 percent of population. PASS
+Cncl_Dist unknown 2; district shares likewise use the full population denominator
+Polarity sample - ZIP-UNKNOWN rows (excluded from ZIP geography, kept in population):
+  ObjectId 6414 ZIP=0.0 APN=160140I90000CO Subtype=Codes High Grass and Weeds
+  ObjectId 11201 ZIP=nan APN=18800019900 Subtype=Codes High Grass and Weeds
+  ObjectId 12318 ZIP=nan APN=09315039600 Subtype=Codes Housing Request
+Polarity sample - ZIP-KNOWN rows (included in ZIP geography):
+  ObjectId 1 ZIP=37209.0 APN=091053I00200CO Subtype=Codes Housing Request
+  ObjectId 2 ZIP=37217.0 APN=12002010700 Subtype=Codes Housing Request
+  ObjectId 3 ZIP=37115.0 APN=04311015100 Subtype=Codes Housing Request
+Inequality check: unknown rule is ZIP is null OR stripped ZIP in {'0','0.0',''} - samples conform. PASS
+
+== 10.1 categorical filter polarity (exact string 'host - no strp') ==
+exact 'host - no strp' 568
+case/space-normalized 'host-nostrp' variants total 586; difference vs exact = 18 near-miss rows NOT counted in the exact figure:
+  'host - no strp': 568
+  'host- no strp': 7
+  'Host - no strp': 3
+  'host  - no strp': 2
+  'host -no strp': 2
+  'host - no STRP': 1
+  'Host- no strp': 1
+  'host-  no strp': 1
+  'host -  no strp': 1
+Polarity sample - MATCHED rows:
+  ObjectId 356 Reported_Problem='host - no strp' Violations_Noted='STRP PERMIT REQUIRED' Subtype='Short Term Rental Property'
+  ObjectId 357 Reported_Problem='host - no strp' Violations_Noted='STRP PERMIT REQUIRED' Subtype='Short Term Rental Property'
+  ObjectId 1000 Reported_Problem='host - no strp' Violations_Noted='STRP PERMIT REQUIRED' Subtype='Short Term Rental Property'
+Polarity sample - near-miss EXCLUDED rows:
+  ObjectId 7727 Reported_Problem='host  - no strp'
+  ObjectId 11910 Reported_Problem='host - no STRP'
+  ObjectId 12840 Reported_Problem='host- no strp'
+All exact-matched rows carry Violations_Noted == 'STRP PERMIT REQUIRED': True
+All exact-matched rows carry Subtype == 'Short Term Rental Property': True
+
+== 10.1 unit agreement ==
+Every share in the brief divides cases by cases of the same stated population (PS cases, STR-subtype cases, or host-exact cases), or parcels by parcels. No rate mixes permits with cases or parcels with cases. Asserted again in build_stats.py. PASS
+
+== 10.1 categorical exhaustiveness (full Counters for coded columns) ==
+Subtype_Description: 18 unique values (null counted where present)
+  'Codes Housing Request': 27495
+  'Codes High Grass and Weeds': 8075
+  'PS Audit': 3824
+  'Short Term Rental Property': 1491
+  'CA Codes Case': 999
+  'Codes Sign Request': 692
+  'Home Occupation PS Complaint': 307
+  'Codes Right of Way Request': 176
+  'CA Paid Parking Lot': 114
+  'CA PS Night Inspection': 43
+  'Codes Neighborhood Request': 17
+  'Landlord Registration Violation': 16
+  'Codes Urban Forestry': 16
+  'CA Paid Parking Garage': 6
+  'PS - Sign Removal': 5
+  'Codes Building Division': 5
+  'Codes Vacant Lot High Grass': 1
+  'Health Department General Sanitation': 1
+Status: 3 unique values (null counted where present)
+  'DONE': 40245
+  'OPEN': 2988
+  'CLOSED': 50
+Complaint_Source: 18 unique values (null counted where present)
+  'HUB': 16462
+  'INSPECTOR REPORTED': 16100
+  'PHONE': 4217
+  'Audit': 3800
+  'EMAIL': 1872
+  'OTHER SOURCE': 462
+  'Other Metro Agency': 100
+  'Metro Council': 75
+  'WALK IN': 57
+  'NEIGHBORHOOD NOTIFICATION': 49
+  'MAIL': 26
+  'Metro PD': 23
+  'NEIGHBORHOOD GROUP': 22
+  'HUB-SPC': 7
+  'CAL': 4
+  'INCIDENTS CONVERTED FROM OLD SYSTEM': 3
+  'Metro Public Works': 2
+  'Codes Online': 2
+Cncl_Dist: 36 unique values (null counted where present)
+  '29': 2571
+  '11': 2427
+  '16': 2382
+  '3': 2093
+  '28': 1988
+  '8': 1810
+  '30': 1798
+  '7': 1772
+  '9': 1752
+  '21': 1671
+  '14': 1636
+  '5': 1635
+  '15': 1609
+  '27': 1584
+  '6': 1472
+  '1': 1444
+  '2': 1247
+  '26': 1160
+  '17': 1151
+  '20': 1141
+  '13': 1008
+  '33': 977
+  '31': 932
+  '19': 828
+  '32': 796
+  '24': 660
+  '12': 647
+  '22': 603
+  '10': 450
+  '18': 434
+  '25': 386
+  '4': 386
+  '23': 300
+  '34': 268
+  '35': 263
+  '<null>': 2
+Reported_Problem: 21722 unique values, null 86; full counter saved to data/reported_problem_counter.csv.gz; top 40:
+  'JUNK TRASH DEBRIS': 3432
+  'PARKING ON GRASS': 2676
+  'HIGH GRASS/WEEDS': 1712
+  'PROBLEM REPORTED': 1009
+  'host - no strp': 568
+  'GW': 555
+  'IMV': 526
+  'Parking on grass': 420
+  'HIGH GRASS': 327
+  'JUNK, TRASH, AND DEBRIS': 310
+  'Junk trash debris': 291
+  'WIND FLAGS': 224
+  'HWG': 224
+  'PID': 214
+  'POG, JTD': 189
+  'High grass/weeds': 184
+  'HIGH WEEDS': 178
+  'JTD, POG': 177
+  'HIGH GRASS AND WEEDS-HGW': 168
+  'PARKING ON GRASS-POG': 157
+  'PARKED ON GRASS-POG': 154
+  'IMV, POG': 145
+  'IMV, JTD': 140
+  'DILAPIDATED SIGN': 128
+  'JUNK TRASH DEBRIS-OPEN STORAGE-JTD': 128
+  'PARKING ON THE GRASS': 126
+  'WEEDS': 122
+  'HIGH GRASS AND WEEDS': 113
+  'host - expired strp': 108
+  'JTD, IMV': 102
+  'Car parked on grass.': 101
+  'Parking on Grass': 100
+  'Type: Property Violations - Tall Grass and Weeds  Description:  Tall grass  Additional Comments:': 99
+  'OPEN STORAGE': 95
+  'JUNK, TRASH AND DEBRIS': 95
+  'HGW, JTD': 86
+  nan: 86
+  'INOPERABLE/UNLICENSED VEHICLE-IMV': 83
+  'PROHIBITED SIGNS': 83
+  'POG, IMV': 83
+All Reported_Problem values containing 'strp' (case-insensitive):
+  'host - no strp': 568
+  'host - expired strp': 108
+  'host - expired strp - multifamily': 14
+  'host list - no strp': 11
+  'host - no strp - 28 nights': 10
+  'host - expired owner occupied STRP': 10
+  'email - no strp': 8
+  'no strp': 8
+  'host- no strp': 7
+  'hotline - no strp': 4
+  'hub - no strp': 4
+  'email - no strp for unit': 4
+  'Type: Property Violations - Residential Complaint  Description:  Units 1, 2, 3, 4, and 5 at 307 Douglas Ave. These are STRPs and have framed in their garages turning them into interior rooms. This has eliminated the parking for the units. They are located outside the UZO and this is a violation of parking minimums.  Additional Comments:': 4
+  'host - no strp - 25 nights': 3
+  'host - expired strp ( multi family )': 3
+  'Host - no strp': 3
+  'host list - expired strp': 2
+  'host - no strp - 29 nights': 2
+  'host- expired strp': 2
+  'email - 5 bedrooms - strp 4/12': 2
+  'host - no strp - 24 nights': 2
+  'web - no strp': 2
+  'host - no strp - cancelled - new owner': 2
+  'host  - no strp': 2
+  'host - expired multifamily STRP': 2
+  'host - expired strp multi family': 2
+  'host - expired owner occupied strp': 2
+  'host - no strp - BOB XMAS CASE': 2
+  'host - no strp - new owner - old permit cancelled': 2
+  'host -no strp': 2
+  'host - cancelled strp - change in ownership': 2
+  'host - no strp - campsite': 2
+  'Type: Property Violations - Residential Complaint  Description:  Units 1, 2, 3, 4, and 5 at 307 Douglas Ave. These are STRPs and have framed in their garages turning them into interior rooms. This has eliminated the parking for the units. They are located outside the UZO and this is a violation of parking minimums.  Additional Comments: Adjoining unit, gazebo added to rooftop without building permits': 2
+  'host - no strp - apartments': 2
+  'host - no strp 28 nights': 2
+  'host - no strp ( new owner )': 2
+  'host - 28 nights - no strp': 1
+  'host list - expired strp - new owner': 1
+  'Per JD Felts / Zoning Administrator states since the owners are renting three individual rooms for a minimum of  thirty days then this would be classified as an Illegal Boarding House and not under purview of STRP enforcement.': 1
+  'hsot - expired strp': 1
+  'host - no strp - apartment': 1
+  'host - cancelled strp - old owners ad': 1
+  'host list- no strp': 1
+  'email - excess occupancy - sleeps 16 - STRP is 4/12. permit # not displayed': 1
+  'email - no strp # listed': 1
+  'email - excess occupancy - sleeps 16 - STRP 4/12.  Permit # not displayed': 1
+  'email - 5 bedrooms - STRP 4/12': 1
+  'email - excess bedrooms - STRP 4/12': 1
+  'email - excess bedrooms and occupancy - strp 4/12': 1
+  'email - excess bedrooms and excess occupancy- strp 4/12': 1
+  'email - 5 bedrooms, permit is for 4/12  & no strp visible': 1
+  'email - no strp for dadu - excess bedrooms': 1
+  'email - 6 bedrooms. STRP is 4/12': 1
+  'email - 5 bedrooms. STRP is 4/12': 1
+  'email - 5 bedrooms - STRP is 4/12': 1
+  'email - 5 bedrooms - 16 people - strp 4/12': 1
+  'email - excess bedrooms and excess occupancy - strp 4/12': 1
+  '1/25/24      Studio Not Permitted This address has an owner-occupied STRP permit for a two bedroom STRP in the main house, which is advertised on https://www.airbnb.com/rooms/13784416 There is a second ad for a separate studio unit that is not permitted. The link to this ad is : https://www.airbnb.com/rooms/42139206? Governed by BL2015-94 eff. Date 1/25/16 (1 permit per parcel) Permit issued 8/29/16.': 1
+  'host - no strp ( did not pay for permit )': 1
+  'email - no strp permit displayed': 1
+Violations_Noted: 2979 unique values, null 62; full counter saved to data/violations_noted_counter.csv.gz; values containing 'STRP':
+  'STRP PERMIT REQUIRED': 1146
+  'EXCESS OCCUPANCY,STRP PERMIT REQUIRED': 4
+  'STRP Permit Required': 2
+  'Excess Bedrooms,PERMIT NOT DISPLAYED,STRP PERMIT REQUIRED': 2
+  'ADVERT OF ENTIRE HOME STRP PROHIBITED': 2
+  'ADVERT OF ENTIRE HOME STRP PROHIBITED,EXCESS OCCUPANCY': 1
+  'ADVERT OF ENTIRE HOME STRP PROHIBITED,PERMIT NOT DISPLAYED': 1
+  'ADVERT OF ENTIRE HOME STRP PROHIBITED,Excess Bedrooms,PERMIT NOT DISPLAYED': 1
+  'RV - Campers, Buses Prohibited,STRP PERMIT REQUIRED,USE NOT PERMITTED': 1
+  'STRP PERMIT REQUIRED,USE NOT PERMITTED': 1
+  'Excess Bedrooms,EXCESS OCCUPANCY,PERMIT NOT DISPLAYED,STRP PERMIT REQUIRED': 1
+
+== 10.2 join hygiene (APN/parcel join to STR permits) ==
+PS APN present on 43283 of 43283 rows (100 percent required for the join claim); STR Parcel present (non-blank) on 17634 of 17634 rows
+APN format lengths PS [(11, 36195), (14, 7088)] vs STR Parcel [(11, 10602), (14, 7032)] - same 11-char standard and 14-char condo format families
+distinct PS APNs 28863; distinct STR parcels ever 10742; distinct STR parcels ISSUED 5466
+distinct PS APNs matching any STR parcel 1378 (4.8 percent of PS APNs)
+PS cases on any-STR-parcel 1781 (4.11 percent); on ISSUED-STR-parcel 714 (1.65 percent)
+Address control: PS cases whose normalized address matches an STR permit address 1637; APN-match OR address-match 1802; BOTH 1616; agreement: 1616 of 1802 union cases (89.7 percent) match on both keys
+Unmatched may differ systematically: condo and multi-unit parcels carry unit-level addresses in the permit file that the case file does not reproduce, so the address control understates matches; the APN is the primary key and is present on 100 percent of both files.
+
+== 10.2 built-in control groups ==
+CONTROL Codes High Grass and Weeds: 8075 cases; on ISSUED STR parcel 41 (0.51 percent)
+CONTROL Codes Housing Request: 27495 cases; on ISSUED STR parcel 182 (0.66 percent)
+CONTROL Codes Sign Request: 692 cases; on ISSUED STR parcel 2 (0.29 percent)
+TREATMENT Short Term Rental Property: 1491 cases; on ISSUED STR parcel 466 (31.3 percent)
+Control result: non-STR case types sit on currently permitted STR parcels at 0.3 to 0.7 percent, against 31.3 percent for STR-subtype cases - the APN join is not producing across-the-board artifacts. PASS
+
+AUDIT COMPLETE - all gates above recorded before charts and prose.
